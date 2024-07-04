@@ -151,7 +151,7 @@ func EnterWorkerThread(env *environment.PBEnvironment, breaker chan struct{}) {
 	conn := env.Connection.(*minecraft.Conn)
 	functionHolder := env.FunctionHolder.(*function.FunctionHolder)
 
-	chunkAssembler := assembler.NewAssembler(assembler.REQUEST_AGGRESSIVE, time.Second*5)
+	chunkAssembler := assembler.NewAssembler(assembler.REQUEST_LAZY, time.Second*5)
 	// max 100 chunk requests per second
 	chunkAssembler.CreateRequestScheduler(func(pk *packet.SubChunkRequest) {
 		conn.WritePacket(pk)

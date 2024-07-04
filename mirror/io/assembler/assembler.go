@@ -37,13 +37,13 @@ func NewAssembler(sendPeriod time.Duration, validCacheTime time.Duration) *Assem
 	a := &Assembler{
 		airRID:           airRID,
 		pendingTasks:     make(map[define.ChunkPos]*mirror.ChunkData),
-		chunkRequestChan: make(chan []*packet.SubChunkRequest, 10240),
+		chunkRequestChan: make(chan []*packet.SubChunkRequest, 4096), // 10240 -> 4096
 		visitTime:        make(map[define.ChunkPos]time.Time),
 		requestQueue:     make(map[define.ChunkPos][]*packet.SubChunkRequest),
 		taskMu:           sync.RWMutex{},
 		queueMu:          sync.RWMutex{},
 		centerChunk:      nil,
-		radius:           10,
+		radius:           4, // 10 -> 4
 	}
 	a.AdjustSendPeriod(sendPeriod)
 	a.AdjustValidCacheTime(validCacheTime)
