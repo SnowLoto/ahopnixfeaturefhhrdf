@@ -328,12 +328,13 @@ func CreateExportTask(commandLine string, env *environment.PBEnvironment) *task.
 							NeedsRedstone:      nrb,
 						}
 						//fmt.Printf("%#v\n",cbdata)
-					} else {
-						pnd, hasNBT := item["__tag"]
-						if hasNBT {
-							nbtData = []byte(pnd.(string))
-						}
 					}
+
+					pnd, hasNBT := item["__tag"]
+					if hasNBT {
+						nbtData = []byte(pnd.(string))
+					}
+
 					// it's ok to ignore "found", because it will set lb to air if not found
 					name, blockData, _ := Blocks.RuntimeIDToLegacyBlock(runtimeId)
 					blocks[counter] = &types.Module{

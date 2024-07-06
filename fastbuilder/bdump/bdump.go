@@ -224,6 +224,13 @@ func (bdump *BDump) writeBlocks(w io.Writer) error {
 			if err != nil {
 				return err
 			}
+		} else if len(mdl.DebugNBTData) > 0 {
+			err := writer.WriteCommand(&command.AssignDebugData{
+				Data: mdl.DebugNBTData,
+			})
+			if err != nil {
+				return err
+			}
 		} else if mdl.NBTData == nil {
 			if len(mdl.Block.BlockStates) == 0 {
 				err := writer.WriteCommand(&command.PlaceBlock{
