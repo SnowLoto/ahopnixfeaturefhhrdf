@@ -62,7 +62,6 @@ const (
 	BDump_Warn_Reserved
 	CommandNotFound
 	ConnectionEstablished
-	Original_Important_Contributor
 	Crashed_No_Connection
 	Crashed_OS_Windows
 	Crashed_StackDump_And_Error
@@ -119,6 +118,7 @@ const (
 	Omega_Enabled
 	Omega_WaitingForOP
 	OpPrivilegeNotGrantedForOperation
+	Original_Important_Contributor
 	Parsing_UnterminatedEscape
 	Parsing_UnterminatedQuotedString
 	PositionGot
