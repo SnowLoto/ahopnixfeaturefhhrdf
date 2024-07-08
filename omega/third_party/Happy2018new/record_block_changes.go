@@ -76,7 +76,7 @@ func (o *RecordBlockChanges) RequestBlockChangesInfo(BlockInfo packet.UpdateBloc
 	if BlockInfo.Flags != 32768 {
 		singleBlock, found := blocks.RuntimeIDToBlock(BlockInfo.NewBlockRuntimeID)
 		if found {
-			blockName_Result = singleBlock.BedrockString()
+			blockName_Result = singleBlock.LongName()
 		} else {
 			blockName_Result = "unknown"
 		}
