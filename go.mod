@@ -10,6 +10,7 @@ require (
 	github.com/golang/snappy v0.0.1
 	github.com/gorilla/websocket v1.5.3
 	github.com/hashicorp/go-version v1.6.0
+	github.com/mitchellh/mapstructure v1.5.0
 	github.com/ugorji/go/codec v1.2.12
 	github.com/yuin/gluamapper v0.0.0-20150323120927-d836955830e7
 	github.com/yuin/gopher-lua v1.1.0
@@ -24,7 +25,6 @@ require (
 	github.com/klauspost/cpuid v1.3.1 // indirect
 	github.com/klauspost/reedsolomon v1.9.9 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
-	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mmcloughlin/avo v0.0.0-20200803215136-443f81d77104 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
@@ -43,7 +43,7 @@ require (
 	github.com/andybalholm/brotli v1.0.3
 	github.com/disintegration/imaging v1.6.2
 	github.com/elliotchance/orderedmap/v2 v2.2.0
-	github.com/go-gl/mathgl v1.0.0
+	github.com/go-gl/mathgl v1.1.0
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/uuid v1.3.0
 	github.com/klauspost/compress v1.13.6
