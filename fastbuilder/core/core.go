@@ -495,7 +495,7 @@ func EstablishConnectionAndInitEnv(env *environment.PBEnvironment) {
 
 func SolveMCPCheckChallenges(env *environment.PBEnvironment) {
 	if args.SkipMCPCheckChallenges {
-		env.CachedPacket = (<-chan packet.Packet)(make(chan packet.Packet))
+		env.CachedPacket = (<-chan CachedPacket)(make(chan CachedPacket))
 		return
 	}
 	// check
@@ -556,7 +556,7 @@ func WaitMCPCheckChallengesDown(
 	defer ticker.Stop()
 	for {
 		err := env.Connection.(*minecraft.Conn).WritePacket(&packet.CommandRequest{
-			CommandLine: "WaitMCPCheckChallengesDown",
+			CommandLine: "list",
 			CommandOrigin: protocol.CommandOrigin{
 				Origin:    protocol.CommandOriginAutomationPlayer,
 				UUID:      ResourcesControl.GenerateUUID(),

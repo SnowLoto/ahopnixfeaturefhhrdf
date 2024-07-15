@@ -37,8 +37,8 @@ char args_isDebugMode=0;
 char args_disableVersionChecking=0;
 char args_skipMCPCheckChallenges=0;
 struct go_string newAuthServer={
-	"https://api.fastbuilder.pro",
-	27
+	"https://user.fastbuilder.pro",
+	28
 };
 struct go_string startup_script=EMPTY_GOSTRING;
 struct go_string server_code=EMPTY_GOSTRING;
