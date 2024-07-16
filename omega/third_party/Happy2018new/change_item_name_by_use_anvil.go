@@ -228,6 +228,7 @@ func (o *ChangeItemNameByUseAnvil) ChangeItemName(chat *defines.GameChat) {
 			o.Frame.GetGameControl().SayTo(chat.Name, fmt.Sprintf("§c命令方块包含的字符串无效\n错误信息为 §f%v", err))
 			return
 		}
+		// 取得物品新名称，并进行反转义
 	}
 	// 获取物品的新名称
 	itemDatas, err := o.apis.Resources.Inventory.GetItemStackInfo(0, targetSlot)
