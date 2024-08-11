@@ -265,18 +265,8 @@ jobs:
           build/phoenixbuilder-windows-executable-x86.exe,
           build/phoenixbuilder-windows-executable-x86_64.exe
         " -out "\
-          build_compressed/phoenixbuilder,
-          build_compressed/phoenixbuilder-no-readline,
-          build_compressed/phoenixbuilder-aarch64,
-          build_compressed/phoenixbuilder-android-executable-arm64,
-          build_compressed/phoenixbuilder-android-executable-armv7,
-          build_compressed/phoenixbuilder-ios-executable,
-          build_compressed/phoenixbuilder-macos,
-          build_compressed/phoenixbuilder-macos-arm64,
-          build_compressed/phoenixbuilder-macos-x86_64,
-          build_compressed/phoenixbuilder-windows-executable-x86.exe,
-          build_compressed/phoenixbuilder-windows-executable-x86_64.exe
-        "
+          build_compressed/phoenixbuilder
+          "
         cp build/hashes.json build_compressed
         cp build/version build_compressed
         ./cos_uploader -l build_compressed -r fastbuilder_official_compressed
